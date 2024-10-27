@@ -1,0 +1,60 @@
+{
+    "simulation_time": 3600,              // Simulation time in seconds (e.g., 1 hour)
+    "num_leo_satellites": 10,             // Number of LEO satellites
+    "num_iot_devices": 1000,              // Number of IoT devices
+    "num_gateways": 16,                   // Number of gateways
+    "carrier_frequency": 868000000,       // Carrier frequency in Hz (e.g., 868 MHz for LoRa)
+    
+    // LoRa communication parameters
+    "lora_parameters": {
+        "spreading_factor": 7,           // Spreading factor (e.g., 6-12 for LoRa)
+        "bandwidth": 125000,             // Bandwidth in Hz (e.g., 125 kHz)
+        "transmission_power": 14,        // Transmission power in dBm
+        "coding_rate": "4/5"             // Coding rate options (e.g., 4/5, 4/6, etc.)
+    },
+
+    // Physical constants
+    "gravitational_constant": 6.67430e-11,  // Gravitational constant G (m^3 kg^-1 s^-2)
+    "earth_mass": 5.972e24,                 // Mass of Earth (kg)
+    "earth_radius": 6371000,                // Radius of Earth (m)
+    "speed_of_light": 3e8,                  // Speed of light (m/s)
+
+    // Satellite altitude ranges
+    "leo_altitude": 500000,               // LEO satellite altitude in meters (e.g., 500 km)
+    "geo_altitude": 35786000,             // GEO satellite altitude in meters (e.g., 35,786 km)
+
+    // Queuing model parameters
+    "queue_parameters": {
+        "service_rate": 1000,             // Service rate in packets per second
+        "utilization_factor": 0.8         // Utilization factor for M/M/1 queue
+    },
+
+    // Visualization parameters
+    "visualization": {
+        "font_size": 16,                  // Font size for plots
+        "grid": true,                     // Enable grid on plots
+        "legend": true,                   // Enable legends
+        "plot_background": "white",       // Background color for plots
+        "axis": "bottom-left"             // Display axes on bottom and left only
+    },
+
+    // Scenario-specific parameters
+    "scenarios": {
+        "dense_urban_iot": {
+            "device_density": 1000        // Devices per km^2
+        },
+        "rural_remote_iot": {
+            "device_density": 10          // Devices per km^2
+        },
+        "mobile_iot": {
+            "device_velocity": 30         // Device speed in km/h
+        },
+        "emergency_response": {
+            "reliability_requirement": 0.999 // Reliability requirement (99.9%)
+        },
+        "industrial_iot": {
+            "max_latency_threshold": 10   // Max latency threshold in ms
+        }
+    }
+}
+
